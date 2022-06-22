@@ -54,32 +54,35 @@ function App() {
       <div>
         <button onClick={showForm}>{isShowForm ? 'Ocultar' : 'Crear'}</button>
       </div>
-      <div>
+      
+        <div className='form-list'>
+          {
+            isShowForm && 
+            <Form 
+              createMovie = {createMovie}
+              updateMovieById = {updateMovieById}    
+              objectUpdate = {objectUpdate}
+              handleSubmit = {handleSubmit}
+              reset = {reset}
+              register = {register}
+            />
+          }
+        </div>
+        <div className="list">
         {
-          isShowForm && 
-          <Form 
-            createMovie = {createMovie}
-            updateMovieById = {updateMovieById}    
-            objectUpdate = {objectUpdate}
-            handleSubmit = {handleSubmit}
-            reset = {reset}
-            register = {register}
-          />
+          users?.map(user => (
+            <CardMovie
+              key={user?.id}
+              user = {user}
+              getAllusers = {getAllusers}
+              URL = {URL}
+              setObjectUpdate = {setObjectUpdate}
+              setIsShowForm = {setIsShowForm}
+              reset = {reset}
+            />
+          ))
         }
       </div>
-      {
-        users?.map(user => (
-          <CardMovie
-            key={user?.id}
-            user = {user}
-            getAllusers = {getAllusers}
-            URL = {URL}
-            setObjectUpdate = {setObjectUpdate}
-            setIsShowForm = {setIsShowForm}
-            reset = {reset}
-          />
-        ))
-      }
     </div>
   )
 }

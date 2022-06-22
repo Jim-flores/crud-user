@@ -1,7 +1,14 @@
 .App {
+  text-align: center;
+  margin-top: 20px;
+}
+.list {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
   padding: 30px;
+}
+.form-list-elements {
+  padding: 5px;
 }

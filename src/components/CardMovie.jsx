@@ -28,8 +28,8 @@ const CardMovie = ({user, getAllusers, URL, setObjectUpdate, setIsShowForm, rese
             <li><b>Email: </b>{user.email}</li>
             <li><b>Birthday: </b>{user.birthday}</li>
         </ul>
-        <button onClick={() => deleteMovie(user.id)}>Delete</button>
-        <button onClick={() => updateMovie(user.id)}>Update</button>
+        <button onClick={() => deleteMovie(user.id)}>❌ Delete</button>
+        <button onClick={() => updateMovie(user.id)}>🔄 Update</button>
     </article>
   )
 }

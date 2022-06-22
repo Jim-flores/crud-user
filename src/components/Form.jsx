@@ -41,7 +41,7 @@ const Form = ({createMovie, updateMovieById, objectUpdate, handleSubmit, reset, 
           <label htmlFor="birthday">Birthday: </label>
           <input type="date" id='birthday' {...register('birthday')}/>
         </div>
-        <button>Submit</button>
+        <button>✅ Submit</button>
     </form>
   )
 }

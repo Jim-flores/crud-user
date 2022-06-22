@@ -52,7 +52,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <button onClick={showForm}>{isShowForm ? 'Ocultar' : 'Crear'}</button>
+        <button onClick={showForm}>{isShowForm ? '🔘 Hidden' : '➕ Create'}</button>
       </div>
       
         <div className='form-list'>
